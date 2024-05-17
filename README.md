@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tech Cortex web app base template
+This is the base template to be used for every project. It contains all of the set up required to get a project up and running quickly. 
+
+## Tech Stack
+* Next.JS - full-stack framework built on top of React (https://nextjs.org/)
+* Supabase - hosted, open source PostgreSQL database infrastructure (https://supabase.com/)
+* Daisy UI + Tailwind CSS - pre-built, high quality css classes for high-speed development (https://daisyui.com/, https://tailwindcss.com/) 
 
 ## Getting Started
+### Creating a plan
+Before writing any code, you must create a rough plan of your web application. The bare minimum is a database entity relationship diagram for the tables you are going to use. It would also help to create some rough ui sketches, but I understand that some people don't need to do this. 
 
-First, run the development server:
+### Creating the Supabase database
+1. Create a supabase account. For small projects you can create a new email specifically for this and use the free plan, but for larger projects you will receive an account with a Pro plan. 
+1. Create a new project then write the details in the comment in the layout.tsx file so you don't forget them. 
+1. Inside the new project go to settings > API. Then copy the url, public key and private keys to the appropriate sections in the .env.local file. 
+1. In the tables section create the required tables, and be careful to add appropriate row level security policies (https://supabase.com/docs/guides/database/postgres/row-level-security)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installing the required packages
+1. In your local machine navigate to the project directory, inside the folder with package.json and run 'npm install'.
+1. To start the application locally run 'npm run dev'
+1. You are now ready to develop. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Stripe + Cloudflare R2 
+In some projects you may need to use Stripe to handle payments, or a Cloudflare R2 bucket to store large files. The files in the 'utils' folder can help you achieve this. 
+<br>IF YOUR PROJECT DOES NOT USE STRIPE AND / OR R2 DELETE THE ENVIRONMENT VARIABLES RELARTED TO THEM IN .env.local. YOU CAN ALSO DELETE THE 'stripe' AND 'cloudflareR2' FOLDERS. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Handing In + Deployment
+In most cases, you will not be required to deploy the project. To hand over the project to me just send me a zip file of the entire code directory. 
+<br>It is important that you send a video explaining your designs and how the program works, as well as any important details. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Good Luck
+Now it's time for you to do your magic. Please pay attention to the project requirements, and I look forward to see the finished product. 
+<br>If you have any queries or concerns do not hesitate to contact me through the discord group-chat or using my email: pl156176@gmail.com. 
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
