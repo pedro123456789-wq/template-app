@@ -27,7 +27,7 @@ In some projects you may need to use Stripe to handle payments, or a Cloudflare 
 
 ### Handing In + Deployment
 In most cases, you will not be required to deploy the project. To hand over the project to me just send me a zip file of the entire code directory. 
-<br>It is important that you send a video explaining your designs and how the program works, as well as any important details. 
+<br>It is important that you send a video explaining your designs and how the program works, as well as any important details. In some cases you will be provided with a vercel account to deploy the project. In these cases it is important you forget to set up the environment variables in the vercel deployment. 
 
 ### Good Luck
 Now it's time for you to do your magic. Please pay attention to the project requirements, and I look forward to see the finished product. 
